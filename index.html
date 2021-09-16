@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search your Favourite Movie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: #0C111B;
+        font-family: 'Prompt', sans-serif;
+    }
+
+    #parent_movie {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    #parent_movie>div:nth-child(1) {
+        width: 35%;
+
+        margin: 2% 35%;
+        font-size: 30px;
+        color: rgb(228, 228, 227);
+        font-weight: 700;
+        font-family: 'Prompt', sans-serif;
+    }
+
+    #parent_movie>div:nth-child(2) {
+        width: 40%;
+        height: 20px;
+        margin: auto;
+    }
+
+    #parent_movie>div:nth-child(2)>input {
+        width: 100%;
+        height: 40px;
+        margin: auto;
+        border: 0;
+        border-bottom: 1px solid rgb(211, 210, 210);
+        outline: none;
+        text-align: center;
+        background-color: #0C111B;
+        color: white;
+    }
+
+    #parent_movie>div:nth-child(2)>input::placeholder {
+
+        text-align: center;
+
+        font-size: 15px;
+        color: white;
+    }
+
+    #parent_movie>div:nth-child(3) {
+        width: 50%;
+        margin: 1% auto;
+        /* background-color:red; */
+    }
+
+    #parent_movie>div:nth-child(3)>button {
+        width: 25%;
+        height: 35px;
+        margin: 5% 38%;
+        font-size: 15px;
+        border: 0;
+        background-color: #0F79AF;
+        color: white;
+        cursor: pointer;
+    }
+
+    #empty_div {
+        display: grid;
+        grid-template-columns: 15% 15% 15% 15% 15% 15%;
+        grid-gap: 1%;
+
+    }
+
+    #empty_div>div {
+        margin-left: 8%;
+        margin-bottom: 15%;
+        background-color: #1A1A1A;
+        height: auto;
+        border-radius: 5px;
+        border: 1px solid rgb(44, 43, 43);
+    }
+
+    #sub_parent>div:nth-child(1) {
+        width: 100%;
+        height: 250px;
+    }
+
+    #sub_parent>div:nth-child(1)>img {
+        width: 99.5%;
+        height: 240px;
+        margin-top: 1%;
+    }
+
+    #sub_parent>div:nth-child(2),
+    #sub_parent>div:nth-child(3),
+    #sub_parent>div:nth-child(4) {
+        display: flex;
+        color: #E4E5E7;
+        margin-bottom: 2%;
+    }
+
+    #sub_parent>div:nth-child(2)>div,
+    #sub_parent>div:nth-child(3)>div,
+    #sub_parent>div:nth-child(4)>div {
+        margin-left: 1%;
+    }
+
+    #div_3_style>div:nth-child(2) {
+        color: #0F79AF;
+        font-weight: 700;
+    }
+
+    #parent_movie>img {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        margin: -15% 46%;
+    }
+
+    #empty_div>img {
+        width: 400%;
+        margin-left: 140%;
+    }
+
+    #div_5_style{
+        color:#0F79AF;
+    }
+</style>
+
+<body>
+
+    <div id="parent_movie">
+        <div>Search your Favourite Movie </div>
+        <div><input type="text" id="search_movie" placeholder="Type Movie Name...." onfocus="change_value()"> </div>
+        <div><button onclick="fetchMovie()">Search</button></div>
+    </div>
+
+    <div id="empty_div"></div>
+
+<script src="./script/movie.js"></script>
+</body>
+
+</html>
